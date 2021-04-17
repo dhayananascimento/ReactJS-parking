@@ -1,7 +1,11 @@
+import React from "react";
+
 import GlobalStyles from "./GlobalStyles";
 import styled from "styled-components";
 
 import Header from "./components/Header";
+import Menu from "./components/Menu";
+import { useState } from "react";
 
 const Container = styled.div`
   width: 100%;
@@ -10,9 +14,21 @@ const Container = styled.div`
 `;
 
 function App() {
+  const [isOpenMenu, setIsOpenMenu] = useState(false);
+
+  function handleMenu() {
+    setIsOpenMenu(!isOpenMenu);
+  }
+
+  window.addEventListener("resize", () => {
+    setIsOpenMenu(false);
+  });
+
   return (
     <Container>
-      <Header />
+      <Header onChangleMenu={handleMenu} />
+      <Menu onChangleMenu={handleMenu} isOpen={isOpenMenu} />
+
       <GlobalStyles />
     </Container>
   );

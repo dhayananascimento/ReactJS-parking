@@ -3,10 +3,10 @@ import { Container, List } from "./styles";
 
 import Header from "../Header";
 
-export default function Menu() {
+export default function Menu({ onChangleMenu, isOpen }) {
   return (
-    <Container>
-      <Header isMenuComponent />
+    <Container isOpen={isOpen}>
+      <Header onChangleMenu={onChangleMenu} isMenuComponent />
 
       <List>
         <li>Entrada</li>
