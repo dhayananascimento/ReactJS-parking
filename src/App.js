@@ -1,6 +1,8 @@
 import GlobalStyles from "./GlobalStyles";
 import styled from "styled-components";
 
+import Header from "./components/Header";
+
 const Container = styled.div`
   width: 100%;
   min-height: 100vh;
@@ -10,6 +12,7 @@ const Container = styled.div`
 function App() {
   return (
     <Container>
+      <Header />
       <GlobalStyles />
     </Container>
   );
