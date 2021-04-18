@@ -1,11 +1,12 @@
 import React from "react";
+import { useState } from "react";
+import styled from "styled-components";
 
 import GlobalStyles from "./GlobalStyles";
-import styled from "styled-components";
 
 import Header from "./components/Header";
 import Menu from "./components/Menu";
-import { useState } from "react";
+import Tabs from "./components/Tabs";
 
 const Container = styled.div`
   width: 100%;
@@ -28,6 +29,8 @@ function App() {
     <Container>
       <Header onChangeMenu={handleMenu} />
       <Menu onChangeMenu={handleMenu} isOpen={isOpenMenu} />
+
+      <Tabs />
 
       <GlobalStyles />
     </Container>
