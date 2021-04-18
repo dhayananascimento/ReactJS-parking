@@ -26,8 +26,8 @@ function App() {
 
   return (
     <Container>
-      <Header onChangleMenu={handleMenu} />
-      <Menu onChangleMenu={handleMenu} isOpen={isOpenMenu} />
+      <Header onChangeMenu={handleMenu} />
+      <Menu onChangeMenu={handleMenu} isOpen={isOpenMenu} />
 
       <GlobalStyles />
     </Container>
