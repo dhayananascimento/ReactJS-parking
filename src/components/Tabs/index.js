@@ -29,7 +29,7 @@ export default function Tabs() {
       </div>
 
       <Content>
-        {actualTab === 1 && <Entrance />}
+        {actualTab === 1 && <Entrance />}        
         {actualTab === 2 && <Exit />}
       </Content>
     </Container>

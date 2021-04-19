@@ -45,7 +45,7 @@ export const Input = styled.input`
   color: #0a261d;
   font-size: 24px;
   text-align: center;
-  border-radius: 8px;
+  border-radius: 4px;
   background-color: #fffbe6;
   border: 1px solid #cccccc;
   margin-bottom: 13px;
@@ -55,7 +55,7 @@ const button = css`
   width: 100%;
   height: 67px;
   border: none;
-  border-radius: 8px;
+  border-radius: 4px;
   margin-bottom: 13px;
 
   font-size: 15px;

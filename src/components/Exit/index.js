@@ -7,10 +7,11 @@ export default function Exit() {
 
   return (
     <Container>
-      <label htmlFor="">Número da placa:</label>
+      <label htmlFor="text">Número da placa:</label>
       <Input
+        id="text"
         type="text"
-        placeholder="AAA-000"
+        placeholder="AAA-0000"
         maxLength={MAXLENGTH}
         onChange={(text) => setText(text.target.value)}
       />

@@ -14,7 +14,7 @@ export const Tab = styled.button`
   font-size: 16px;
 
   border: none;
-  border-radius: 8px 8px 0 0;
+  border-radius: 4px 4px 0 0;
 
   color: ${({ active }) => (active ? "#4dd0e1" : "#9B9B9B")};
   background-color: ${({ active }) => (active ? "#fff" : "#f2f2f2")};
