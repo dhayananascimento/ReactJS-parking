@@ -1,35 +1,49 @@
 import React, { useState } from "react";
 import { Container, Input, PaymentButton, ExitButton } from "./styles";
 
+import Payment from "../Payment";
+
 export default function Exit() {
-  const [text, setText] = useState("");
+  const [plate, setPlate] = useState("");
+  const [payment, setPayment] = useState(false);
   const MAXLENGTH = 8;
 
   return (
-    <Container>
-      <label htmlFor="text">Número da placa:</label>
-      <Input
-        id="text"
-        type="text"
-        placeholder="AAA-0000"
-        maxLength={MAXLENGTH}
-        onChange={(text) => setText(text.target.value)}
-      />
+    <>
+      <Container>
+        <label htmlFor="plate">Número da placa:</label>
+        <Input
+          id="plate"
+          type="text"
+          value={plate}
+          placeholder="AAA-0000"
+          maxLength={MAXLENGTH}
+          onChange={(plate) => setPlate(plate.target.value)}
+        />
 
-      <PaymentButton
-        disabled={!(text.length === MAXLENGTH)}
-        enable={text.length === MAXLENGTH}
-      >
-        PAGAMENTO
-      </PaymentButton>
-      <ExitButton
-        disabled={!(text.length === MAXLENGTH)}
-        enable={text.length === MAXLENGTH}
-      >
-        SAÍDA
-      </ExitButton>
+        <PaymentButton
+          type="button"
+          disabled={!(plate.length === MAXLENGTH)}
+          enable={plate.length === MAXLENGTH}
+          onClick={() => {
+            setPayment(true);
+          }}
+        >
+          PAGAMENTO
+        </PaymentButton>
 
-      <a href="/">VER HISTÓRICO</a>
-    </Container>
+        <ExitButton
+          type="button"
+          disabled={!(plate.length === MAXLENGTH)}
+          enable={plate.length === MAXLENGTH}
+        >
+          SAÍDA
+        </ExitButton>
+
+        <a href="/">VER HISTÓRICO</a>
+      </Container>
+
+      {payment && <Payment plate={plate} changeVisibility={setPayment} />}
+    </>
   );
 }
