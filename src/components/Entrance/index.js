@@ -27,15 +27,13 @@ export default function Entrance() {
       url: "https://parking-lot-to-pfz.herokuapp.com/parking",
       headers: {
         "content-type": "application/json",
-        authorization: "Bearer ACCESS_TOKEN",
       },
       data: {
         plate,
       },
     };
 
-    axios
-      .request(options)
+    axios(options)
       .then(function () {
         setActualContent(3);
         setError(false);
