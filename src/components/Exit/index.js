@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import { Container, Input, PaymentButton, ExitButton } from "./styles";
 
 import Payment from "../Payment";
+import ExitConfirm from "../ExitConfirm";
 
 export default function Exit() {
   const [plate, setPlate] = useState("");
   const [payment, setPayment] = useState(false);
+  const [exit, setExit] = useState(false);
   const MAXLENGTH = 8;
 
   return (
@@ -36,6 +38,9 @@ export default function Exit() {
           type="button"
           disabled={!(plate.length === MAXLENGTH)}
           enable={plate.length === MAXLENGTH}
+          onClick={() => {
+            setExit(true);
+          }}
         >
           SAÍDA
         </ExitButton>
@@ -44,6 +49,8 @@ export default function Exit() {
       </Container>
 
       {payment && <Payment plate={plate} changeVisibility={setPayment} />}
+
+      {exit && <ExitConfirm plate={plate} changeVisibility={setExit} />}
     </>
   );
 }
