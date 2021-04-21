@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { Container, Input, PaymentButton, ExitButton } from "./styles";
 
-import Payment from "../Payment";
 import ExitConfirm from "../ExitConfirm";
 
 export default function Exit() {
   const [plate, setPlate] = useState("");
-  const [payment, setPayment] = useState(false);
-  const [exit, setExit] = useState(false);
+
+  const [paid, setPaid] = useState(false);
+  const [left, setLeft] = useState(false);
+
   const MAXLENGTH = 8;
 
   return (
@@ -28,7 +29,7 @@ export default function Exit() {
           disabled={!(plate.length === MAXLENGTH)}
           enable={plate.length === MAXLENGTH}
           onClick={() => {
-            setPayment(true);
+            setPaid(true);
           }}
         >
           PAGAMENTO
@@ -39,7 +40,7 @@ export default function Exit() {
           disabled={!(plate.length === MAXLENGTH)}
           enable={plate.length === MAXLENGTH}
           onClick={() => {
-            setExit(true);
+            setLeft(true);
           }}
         >
           SAÍDA
@@ -48,9 +49,13 @@ export default function Exit() {
         <a href="/">VER HISTÓRICO</a>
       </Container>
 
-      {payment && <Payment plate={plate} changeVisibility={setPayment} />}
+      {paid && (
+        <ExitConfirm type="paid" plate={plate} changeVisibility={setPaid} />
+      )}
 
-      {exit && <ExitConfirm plate={plate} changeVisibility={setExit} />}
+      {left && (
+        <ExitConfirm type="left" plate={plate} changeVisibility={setLeft} />
+      )}
     </>
   );
 }

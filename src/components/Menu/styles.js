@@ -9,7 +9,8 @@ export const Container = styled.div`
   top: 0;
 
   transition: transform 0.5s ease-in-out;
-  transform: ${({ isOpen }) => (isOpen ? "translateX(0)" : "translateX(100%)")};
+  transform: ${({ isVisible }) =>
+    isVisible ? "translateX(0)" : "translateX(100%)"};
 `;
 
 export const List = styled.ul`

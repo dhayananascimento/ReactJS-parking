@@ -6,20 +6,20 @@ import Menu from "../../components/Menu";
 import Tabs from "../../components/Tabs";
 
 export default function Home() {
-  const [isOpenMenu, setIsOpenMenu] = useState(false);
+  const [isMenuVisible, setIsMenuVisible] = useState(false);
 
   function handleMenu() {
-    setIsOpenMenu(!isOpenMenu);
+    setIsMenuVisible(!isMenuVisible);
   }
 
   window.addEventListener("resize", () => {
-    setIsOpenMenu(false);
+    setIsMenuVisible(false);
   });
 
   return (
     <Container>
-      <Header onChangeMenu={handleMenu} />
-      <Menu onChangeMenu={handleMenu} isOpen={isOpenMenu} />
+      <Header changeMenuVisibility={handleMenu} />
+      <Menu changeMenuVisibility={handleMenu} isVisible={isMenuVisible} />
 
       <Tabs />
     </Container>

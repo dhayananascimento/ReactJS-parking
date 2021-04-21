@@ -38,7 +38,6 @@ export const Button = styled.button`
 
 export const List = styled.ul`
   display: none;
-
   list-style: none;
 
   color: #fff;
