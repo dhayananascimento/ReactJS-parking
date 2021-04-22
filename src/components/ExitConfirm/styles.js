@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Overlay = styled.form`
-  background: rgba(0, 0, 0, 0.5);
+  background-color: var(--transparent-background);
   padding: 10px;
   position: fixed;
   top: 0;
@@ -19,10 +19,10 @@ export const Container = styled.div`
   width: 100%;
   height: 294px;
   max-width: 400px;
-  background: #fff;
+  background-color: var(--white-background);
 
   padding: 32px 14px 28px;
-  border-radius: 4px;
+  border-radius: var(--border-radius);
 
   display: flex;
   align-items: center;
@@ -30,14 +30,14 @@ export const Container = styled.div`
   flex-direction: column;
 
   p {
-    color: #4a4a4a;
+    color: var(--black-text);
     font-size: 16px;
     margin-bottom: 3px;
     text-align: center;
   }
 
   span {
-    color: #00bcd4;
+    color: var(--blue-text);
     font-size: 38px;
     margin-bottom: 24px;
   }
@@ -57,7 +57,7 @@ export const LoadingWrapper = styled.div`
   }
 
   p {
-    color: #4a4a4a;
+    color: var(--black-text);
     font-size: 16px;
     margin-top: 23px;
   }
@@ -67,23 +67,23 @@ export const ConfirmButton = styled.button`
   width: 100%;
   height: 67px;
   border: none;
-  border-radius: 4px;
+  border-radius: var(--border-radius);
   margin-bottom: 24px;
 
   font-size: 15px;
   font-weight: 600;
   cursor: pointer;
 
-  color: #fff;
-  background-color: #a769b2;
+  color: var(--white-text);
+  background-color: var(--purple-button);
 `;
 
 export const BackButton = styled.button`
-  color: #00bcd4;
+  color: var(--blue-text);
   font-size: 15px;
   font-weight: 600;
   text-align: center;
   border: none;
   cursor: pointer;
-  background-color: transparent;
+  background-color: var(--transparent-button);
 `;

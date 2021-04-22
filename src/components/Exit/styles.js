@@ -8,13 +8,13 @@ export const Container = styled.form`
   flex-direction: column;
 
   label {
-    color: #9b9b9b;
+    color: var(--grey-text);
     font-size: 16px;
     margin-bottom: 7px;
   }
 
   a {
-    color: #00bcd4;
+    color: var(--blue-text);
     font-size: 15px;
     font-weight: 600;
     margin-top: 8px;
@@ -25,29 +25,29 @@ export const Container = styled.form`
 
 export const Input = styled.input`
   ::-webkit-input-placeholder {
-    color: #9b9b9b;
+    color: var(--grey-text);
   }
 
   :-moz-placeholder {
-    color: #9b9b9b;
+    color: var(--grey-text);
   }
 
   ::-moz-placeholder {
-    color: #9b9b9b;
+    color: var(--grey-text);
   }
 
   :-ms-input-placeholder {
-    color: #9b9b9b;
+    color: var(--grey-text);
   }
 
   height: 67px;
   width: 100%;
-  color: #0a261d;
+  color: var(--input-text);
   font-size: 24px;
   text-align: center;
-  border-radius: 4px;
-  background-color: #fffbe6;
-  border: 1px solid #cccccc;
+  border-radius: var(--border-radius);
+  background-color: var(--input-background);
+  border: 1px solid var(--input-border);
   margin-bottom: 13px;
 `;
 
@@ -55,7 +55,7 @@ const button = css`
   width: 100%;
   height: 67px;
   border: none;
-  border-radius: 4px;
+  border-radius: var(--border-radius);
   margin-bottom: 13px;
 
   font-size: 15px;
@@ -66,14 +66,18 @@ const button = css`
 export const PaymentButton = styled.button`
   ${button}
 
-  color: ${({ enable }) => (enable ? "#ffffff" : "#9B9B9B")};
-  background-color: ${({ enable }) => (enable ? "#A769B2" : "#dadada")};
+  color: ${({ enable }) => (enable ? "var(--white-text)" : "var(--grey-text)")};
+  background-color: ${({ enable }) =>
+    enable ? "var(--purple-button)" : "var(--grey-button)"};
 `;
 
 export const ExitButton = styled.button`
   ${button}
 
-  background-color: #fff;
-  color: ${({ enable }) => (enable ? "#A769B2" : "#9B9B9B")};
-  border: 2px solid ${({ enable }) => (enable ? "#A769B2" : "#dadada")};
+  background-color: var(--white-button);
+  color: ${({ enable }) =>
+    enable ? "var(--purple-text)" : "var(--grey-text)"};
+  border: 2px solid
+    ${({ enable }) =>
+      enable ? "var(--purple-border-button)" : "var(--grey-border-button)"};
 `;

@@ -14,14 +14,16 @@ export const Tab = styled.button`
   font-size: 16px;
 
   border: none;
-  border-radius: 4px 4px 0 0;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
 
-  color: ${({ active }) => (active ? "#4dd0e1" : "#9B9B9B")};
-  background-color: ${({ active }) => (active ? "#fff" : "#f2f2f2")};
-  border-bottom: 3px solid ${({ active }) => (active ? "#4dd0e1" : "#f2f2f2")};
+  color: ${({ active }) => (active ? "var(--tab-text)" : "var(--grey-text)")};
+  background-color: ${({ active }) =>
+    active ? "var(--white-background)" : "var(--background)"};
+  border-bottom: 3px solid
+    ${({ active }) => (active ? "var(--tab-border)" : "var(--background)")};
 `;
 
 export const Content = styled.div`
   width: 100%;
-  background-color: #fff;
+  background-color: var(--white-background);
 `;

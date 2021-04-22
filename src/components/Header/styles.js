@@ -7,7 +7,7 @@ const media = {
 export const Container = styled.header`
   width: 100%;
   height: 60px;
-  background-color: #4dd0e1;
+  background-color: var(--header);
 
   display: flex;
   flex-direction: row;
@@ -27,7 +27,7 @@ export const Button = styled.button`
 
   border: none;
   padding: 10px;
-  background-color: transparent;
+  background-color: var(--transparent-button);
 
   ${media.desktop} {
     &:nth-child(2) {
@@ -40,7 +40,7 @@ export const List = styled.ul`
   display: none;
   list-style: none;
 
-  color: #fff;
+  color: var(--white-text);
   font-size: 16px;
 
   li {

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 100%;
   height: 100%;
-  background-color: #4dd0e1;
+  background-color: var(--header);
 
   position: fixed;
   top: 0;
@@ -16,7 +16,7 @@ export const Container = styled.div`
 export const List = styled.ul`
   list-style: none;
 
-  color: #fff;
+  color: var(--white-text);
   font-size: 16px;
 
   li {
