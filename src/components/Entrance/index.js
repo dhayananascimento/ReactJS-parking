@@ -40,7 +40,6 @@ export default function Entrance() {
       .then(function () {
         setActualContent(3);
         setError(false);
-        setPlate("");
 
         setTimeout(() => {
           setActualContent(1);

@@ -6,4 +6,6 @@ export const Container = styled.div`
   background-color: var(--background);
 `;
 
-export const Main = styled.main``;
+export const Main = styled.main`
+  padding: 0 8px;
+`;

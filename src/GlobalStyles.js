@@ -42,6 +42,7 @@ const GlobalStyles = createGlobalStyle`
 
     --historic-text: #0A261D;
     --historic-border: #E4E3E3;
+    --historic-shadow: rgba(0,0,0,0.2);
 
     --red-text: #FF0068;
     --purple-text: #A769B2;
