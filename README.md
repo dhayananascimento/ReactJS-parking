@@ -3,12 +3,16 @@ A aplicação consiste em uma web app para registro e visualização de entradas
 
 ## Demo
 Você pode testar clicando [aqui](https://dhayana-parking.netlify.app/).
-    
+ 
 ## Tecnologias
 * ReactJS
 * Axios
 * Styled Components
 * React Router DOM
+
+## Requisitos
+* Node.js
+* yarn ou npm
 
 ## Linguagens
 * JavaScript
