@@ -1,9 +1,10 @@
 import React, { useState, useContext } from "react";
 import { Container, Input, PaymentButton, ExitButton } from "./styles";
 
-import ExitConfirm from "../ExitConfirm";
-
+import { Link } from "react-router-dom";
 import { Context } from "../../provider/MainProvider";
+
+import ExitConfirm from "../ExitConfirm";
 
 export default function Exit() {
   const { plate, setPlate } = useContext(Context);
@@ -48,7 +49,7 @@ export default function Exit() {
           SAÍDA
         </ExitButton>
 
-        <a href="/">VER HISTÓRICO</a>
+        <Link to="/historic">VER HISTÓRICO</Link>
       </Container>
 
       {paid && <ExitConfirm type="paid" changeVisibility={setPaid} />}

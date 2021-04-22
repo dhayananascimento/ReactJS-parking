@@ -5,3 +5,5 @@ export const Container = styled.div`
   min-height: 100vh;
   background-color: var(--background);
 `;
+
+export const Main = styled.main``;

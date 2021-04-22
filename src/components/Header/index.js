@@ -19,7 +19,13 @@ export default function Header({ changeMenuVisibility, isMenuComponent }) {
 
   return (
     <Container>
-      <Button as={Link} to="/">
+      <Button
+        as={Link}
+        to="/"
+        onClick={() => {
+          if (isMenuComponent) changeMenuVisibility();
+        }}
+      >
         <img src={Logo} alt="Logo" />
       </Button>
 
