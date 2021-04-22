@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Container, Tab, Content } from "./styles";
 
 import Entrance from "../Entrance";
 import Exit from "../Exit";
 
+import { Context } from "../../provider/MainProvider";
+
 export default function Tabs() {
-  const [actualTab, setActualTab] = useState(1);
+  const { actualTab, setActualTab } = useContext(Context);
 
   return (
     <Container>

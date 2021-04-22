@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import axios from "axios";
 import {
   Overlay,
@@ -10,6 +10,8 @@ import {
 
 import Loading from "../../assets/loading.png";
 import Done from "../../assets/round-done-button.png";
+
+import { Context } from "../../provider/MainProvider";
 
 const data = {
   left: {
@@ -26,8 +28,10 @@ const data = {
   },
 };
 
-export default function ExitConfirm({ plate, changeVisibility, type }) {
+export default function ExitConfirm({ changeVisibility, type }) {
   const [actualContent, setActualContent] = useState(1);
+
+  const { plate } = useContext(Context);
 
   function handleExit() {
     setActualContent(2);

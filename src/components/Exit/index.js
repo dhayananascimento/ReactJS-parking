@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Container, Input, PaymentButton, ExitButton } from "./styles";
 
 import ExitConfirm from "../ExitConfirm";
 
+import { Context } from "../../provider/MainProvider";
+
 export default function Exit() {
-  const [plate, setPlate] = useState("");
+  const { plate, setPlate } = useContext(Context);
 
   const [paid, setPaid] = useState(false);
   const [left, setLeft] = useState(false);
@@ -49,13 +51,9 @@ export default function Exit() {
         <a href="/">VER HISTÓRICO</a>
       </Container>
 
-      {paid && (
-        <ExitConfirm type="paid" plate={plate} changeVisibility={setPaid} />
-      )}
+      {paid && <ExitConfirm type="paid" changeVisibility={setPaid} />}
 
-      {left && (
-        <ExitConfirm type="left" plate={plate} changeVisibility={setLeft} />
-      )}
+      {left && <ExitConfirm type="left" changeVisibility={setLeft} />}
     </>
   );
 }

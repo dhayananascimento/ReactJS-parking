@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import axios from "axios";
 import {
   Container,
@@ -12,8 +12,10 @@ import Loading from "../../assets/loading.png";
 import RedAlert from "../../assets/ic_arlert.png";
 import Done from "../../assets/round-done-button.png";
 
+import { Context } from "../../provider/MainProvider";
+
 export default function Entrance() {
-  const [plate, setPlate] = useState("");
+  const { plate, setPlate } = useContext(Context);
   const [error, setError] = useState(false);
 
   const [actualContent, setActualContent] = useState(1);
