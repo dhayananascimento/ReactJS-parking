@@ -21,6 +21,7 @@ export const List = styled.ul`
 
   li {
     padding: 25px 15px;
+    cursor: pointer;
   }
 
   li:first-child {

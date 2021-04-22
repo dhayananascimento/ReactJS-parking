@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import { Container, Tab, Content } from "./styles";
 
 import Entrance from "../Entrance";
