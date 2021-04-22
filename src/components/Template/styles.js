@@ -7,5 +7,5 @@ export const Container = styled.div`
 `;
 
 export const Main = styled.main`
-  padding: 0 8px;
+  padding: 0 8px 10px;
 `;

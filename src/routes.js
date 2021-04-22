@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
 import Historic from "./pages/Historic";
+import HistoricDetails from "./pages/HistoricDatails";
 
 function Routes() {
   return (
@@ -10,6 +11,7 @@ function Routes() {
       <Switch>
         <Route path="/" component={Home} exact />
         <Route path="/historic" component={Historic} />
+        <Route path="/historic-details" component={HistoricDetails} />
       </Switch>
     </BrowserRouter>
   );

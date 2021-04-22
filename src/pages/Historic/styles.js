@@ -5,6 +5,7 @@ export const HistoricWrapper = styled.div`
   max-width: 768px;
   margin: 41px auto;
   padding: 14px 17px;
+  border-radius: var(--border-radius);
   background-color: var(--white-background);
 `;
 
@@ -31,6 +32,7 @@ export const HeaderWrapper = styled.div`
 `;
 
 export const DataWrapper = styled.div`
+  cursor: pointer;
   margin-bottom: 16px;
   padding: 17px 15px;
   border: 1px solid var(--historic-border);

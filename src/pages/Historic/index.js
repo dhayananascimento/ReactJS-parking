@@ -81,7 +81,14 @@ export default function Historic() {
           console.log(key);
 
           return (
-            <DataWrapper key={key}>
+            <DataWrapper
+              key={key}
+              onClick={() => {
+                history.push("/historic-details", {
+                  item: { ...item, time: totalTime.join("") },
+                });
+              }}
+            >
               <div>
                 <p>{item.left ? "Tempo total" : "Tempo Atual"}</p>
                 <p>Pagamento</p>
